@@ -6,6 +6,6 @@ def config = new Yaml().load(("${workDir}/jobs.yaml" as File).text)
 
 println config
 
-// config.folders.each{ folder ->
-//   folder(folder)
-// }
+config.folders.each{ folder -> 
+  print folder
+}
