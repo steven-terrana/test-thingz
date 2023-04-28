@@ -7,3 +7,4 @@ systems:
   components:
   - name: component-C
   - name: component-D
+- name: system-3
