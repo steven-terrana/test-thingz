@@ -17,6 +17,8 @@ config.systems.each{ system ->
               repository(component.name)
               credentialsId(config.github.credential)
               buildForkPRHead(true)
+              configuredByUrl(false)
+              repositoryUrl("https://github.com/${system.org}/${component.name}")
               traits {
                 gitHubBranchDiscovery {
                   strategyId(3)
