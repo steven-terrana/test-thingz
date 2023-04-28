@@ -1,9 +1,9 @@
 systems: 
-# - name: system-1
-#   components:
-#   - name: component-A
-#   - name: component-B
-# - name: system-2
-#   components:
-#   - name: component-C
-# - name: system-3
+- name: system-1
+  components:
+  - name: component-A
+  - name: component-B
+- name: system-2
+  components:
+  - name: component-C
+- name: system-3
