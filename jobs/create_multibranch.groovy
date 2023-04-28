@@ -15,7 +15,7 @@ config.systems.each{ system ->
               // id('23232323') // IMPORTANT: use a constant and unique identifier
               repoOwner(system.org)
               repository(component.name)
-              credentialsId(github.credential)
+              credentialsId(config.github.credential)
               buildForkPRHead(true)
               traits {
                 gitHubBranchDiscovery {
