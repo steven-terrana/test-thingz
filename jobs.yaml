@@ -1,9 +1,15 @@
+
+
+github:
+  credential: "github"
 systems: 
 - name: system-1
+  org: system-1-org
   components:
-  - name: component-A
+  - name: component-A    
   - name: component-B
 - name: system-2
+  org: system-2-org
   components:
   - name: component-C
 - name: system-3

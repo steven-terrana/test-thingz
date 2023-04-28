@@ -8,7 +8,34 @@ config.systems.each{ system ->
   folder(system.name)
   system.components.each{ component ->
     multibranchPipelineJob("${system.name}/${component.name}") {
-
+      branchSources {
+        branchSource {
+          source {
+            github {
+              // id('23232323') // IMPORTANT: use a constant and unique identifier
+              repoOwner(system.org)
+              repository(component.name)
+              credentialsId(github.credential)
+              buildForkPRHead(true)
+              traits {
+                gitHubBranchDiscovery {
+                  strategyId(3)
+                }
+                gitHubPullRequestDiscovery {
+                  strategyId(3)
+                }
+              }
+            }
+          }
+        }
+      }
+      factory {
+        templateBranchProjectFactory {
+          configurationPath('pipeline_config.groovy')
+          scriptPath('Jenkinsfile')
+          filterBranches(false)
+        }
+      }
     }
   }
 }
