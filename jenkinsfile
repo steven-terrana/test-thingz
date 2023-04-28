@@ -1,0 +1,4 @@
+node{
+  git branch: 'main', url: 'https://github.com/steven-terrana/test-thingz'
+  jobDsl removedJobAction: 'DELETE', targets: 'jobs/**/*.groovy'
+}
